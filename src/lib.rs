@@ -1,4 +1,6 @@
 // mod utils;
+extern crate serde_json;
+extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 // use std::collections::HashMap;
@@ -31,10 +33,6 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 extern {
     fn alert(s: &str);
 }
-// #[wasm_bindgen]
-// pub fn do_calculation(s: &str) {
-//
-// }
 
 #[wasm_bindgen]
 pub fn say_something(s: &str) {
@@ -45,3 +43,9 @@ pub fn say_something(s: &str) {
 pub fn important_3(s: &str) -> String{
     return format!("{}!{}!{}!", s, s, s).to_string();
 }
+
+#[wasm_bindgen]
+pub fn aggregator() {
+
+}
+
